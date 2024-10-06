@@ -49,6 +49,16 @@ public class HumanoidHandPoseHelperEditor : Editor
     }
     EditorGUI.EndDisabledGroup();
 
+    // copy the pose of the left hand onto the right
+    if (GUILayout.Button(humanoidHandPoseHelper.lockRightHandPoseToLeft ? "Copy right hand pose" : "Mirror right hand pose to left hand"))
+    {
+
+      foreach (string keyRight in humanoidHandPoseHelper.rightHandPoseValueMap.Keys)
+      {
+        string keyLeft = keyRight.Replace("Right", "Left");
+        humanoidHandPoseHelper.leftHandPoseValueMap[keyLeft] = humanoidHandPoseHelper.rightHandPoseValueMap[keyRight];
+      }
+    }
 
 
     if (GUILayout.Button("Reset HandPose"))
