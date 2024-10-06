@@ -7,6 +7,8 @@ It is intended to be used to be able to add facial expressions to the character'
 
 The created AnimationClip is in Humanoid format, so it can be used universally for other characters.
 
+![Screenshot 2024-04-29 155517](https://github.com/cubee-cb/HumanoidHandPoseHelper/assets/157681441/89c28190-a1cc-4d3d-8995-cf366dbdbd94)
+
 ## How to use
 1. Put the HumanoidHandPoseHelper folder in the repository into your Unity project.
 
